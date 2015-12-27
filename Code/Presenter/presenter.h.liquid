@@ -1,0 +1,21 @@
+//
+//  {{ prefix }}{{ module_info.name }}{{ module_info.file_name }}
+//  {{ module_info.project_name }}
+//
+//  Created by {{ developer.name }} on {{ date }}.
+//  Copyright {{ year }} {{ developer.company }}. All rights reserved.
+//
+
+#import <Foundation/Foundation.h>
+
+#import "{{ prefix }}{{ module_info.name }}PresenterIO.h"
+#import "{{ prefix }}{{ module_info.name }}ControllerIO.h"
+#import "{{ prefix }}{{ module_info.name }}InteractorIO.h"
+
+@interface {{ prefix }}{{ module_info.name }}Presenter : NSObject <{{ prefix }}{{ module_info.name }}PresenterInterface, {{ prefix }}{{ module_info.name }}InteractorDelegate, {{ prefix }}{{ module_info.name }}ControllerDelegate>
+
+@property (weak, nonatomic) id <{{ prefix }}{{ module_info.name }}PresenterDelegate> head;
+@property (weak, nonatomic) id <{{ prefix }}{{ module_info.name }}ControllerInterface> controller;
+@property (weak, nonatomic) id <{{ prefix }}{{ module_info.name }}InteractorInterface> interactor;
+
+@end

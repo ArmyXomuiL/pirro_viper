@@ -1,0 +1,36 @@
+# Template information section
+name: "pirro_viper"
+summary: "VIPER module template. Used in Pirro team"
+author: "ArmyXomuiL"
+version: "1.0.0"
+license: "Pirro team"
+
+# The declarations for code files
+code_files:
+# Header layer
+- {name: Header/IO.h, path: Code/Header/io.h.liquid}
+- {name: Header/Header.h, path: Code/Header/header.h.liquid}
+- {name: Header/Header.m, path: Code/Header/header.m.liquid}
+
+# Controller layer
+- {name: Controller/ControllerIO.h, path: Code/Controller/controllerIO.h.liquid}
+- {name: Controller/ViewController.h, path: Code/Controller/viewController.h.liquid}
+- {name: Controller/ViewController.m, path: Code/Controller/viewController.m.liquid}
+
+# Presenter layer
+- {name: Presenter/PresenterIO.h, path: Code/Presenter/presenterIO.h.liquid}
+- {name: Presenter/Presenter.h, path: Code/Presenter/presenter.h.liquid}
+- {name: Presenter/Presenter.m, path: Code/Presenter/presenter.m.liquid}
+
+# Interactor layer
+- {name: Interactor/InteractorIO.h, path: Code/Interactor/interactorIO.h.liquid}
+- {name: Interactor/Interactor.h, path: Code/Interactor/interactor.h.liquid}
+- {name: Interactor/Interactor.m, path: Code/Interactor/interactor.m.liquid}
+
+# Model layer
+- {name: Model/Model.h, path: Code/Model/model.h.liquid}
+- {name: Model/Model.m, path: Code/Model/model.m.liquid}
+
+# The declarations for test files
+
+# Template dependencies
