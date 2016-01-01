@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 #import "{{ prefix }}{{ module_info.name }}InteractorIO.h"
 
-@interface {{ prefix }}{{ module_info.name }}Logic : NSObject <{{ prefix }}{{ module_info.name }}InteractorInterface>
+@interface {{ prefix }}{{ module_info.name }}Interactor : NSObject <{{ prefix }}{{ module_info.name }}InteractorInterface>
 
 @property (weak, nonatomic) id <{{ prefix }}{{ module_info.name }}InteractorDelegate> presenter;
 

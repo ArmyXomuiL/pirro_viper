@@ -18,7 +18,7 @@
 @property (weak, nonatomic) id <{{ prefix }}{{ module_info.name }}Delegate> root;
 
 @property (strong, nonatomic) {{ prefix }}{{ module_info.name }}ViewController* controller;
-@property (strong, nonatomic) {{ prefix }}{{ module_info.name }}Logic* interactor;
+@property (strong, nonatomic) {{ prefix }}{{ module_info.name }}Interactor* interactor;
 @property (strong, nonatomic) {{ prefix }}{{ module_info.name }}Presenter* presenter;
 
 @end
@@ -33,7 +33,7 @@
         
         self.controller = [{{ prefix }}{{ module_info.name }}ViewController new];
         self.presenter = [{{ prefix }}{{ module_info.name }}Presenter new];
-        self.interactor = [{{ prefix }}{{ module_info.name }}Logic new];
+        self.interactor = [{{ prefix }}{{ module_info.name }}Interactor new];
         
         self.presenter.head = self;
         self.presenter.controller = self.controller;
@@ -48,7 +48,7 @@
 #pragma mark - {{ prefix }}{{ module_info.name }}Interface
 
 - (void)showInViewController:(UIViewController*) viewController {
-    [self.controller showInViewController:viewController];
+
 }
 
 @end
