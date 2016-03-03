@@ -6,10 +6,13 @@
 //  Copyright {{ year }} {{ developer.company }}. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 #import "{{ prefix }}{{ module_info.name }}IO.h"
 
 @interface {{ prefix }}{{ module_info.name }}Header : NSObject <{{ prefix }}{{ module_info.name }}Interface>
+
+//- (void)showInViewController:(UIViewController*)viewController;
+//- (void)pushInNavigationController:(UINavigationController*)navigationController;
 
 - (id)initWithRoot:(id <{{ prefix }}{{ module_info.name }}Delegate>) root;
 

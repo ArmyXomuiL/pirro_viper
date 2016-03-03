@@ -8,13 +8,13 @@
 
 #import <Foundation/Foundation.h>
 
-#import "{{ prefix }}{{ module_info.name }}PresenterIO.h"
+#import "{{ prefix }}{{ module_info.name }}IO.h"
 #import "{{ prefix }}{{ module_info.name }}ControllerIO.h"
 #import "{{ prefix }}{{ module_info.name }}InteractorIO.h"
 
-@interface {{ prefix }}{{ module_info.name }}Presenter : NSObject <{{ prefix }}{{ module_info.name }}PresenterInterface, {{ prefix }}{{ module_info.name }}InteractorDelegate, {{ prefix }}{{ module_info.name }}ControllerDelegate>
+@interface {{ prefix }}{{ module_info.name }}Presenter : NSObject <{{ prefix }}{{ module_info.name }}InteractorDelegate, {{ prefix }}{{ module_info.name }}ControllerDelegate, {{ prefix }}{{ module_info.name }}Interface>
 
-@property (weak, nonatomic) id <{{ prefix }}{{ module_info.name }}PresenterDelegate> head;
+@property (weak, nonatomic) id <{{ prefix }}{{ module_info.name }}Delegate> root;
 @property (weak, nonatomic) id <{{ prefix }}{{ module_info.name }}ControllerInterface> controller;
 @property (weak, nonatomic) id <{{ prefix }}{{ module_info.name }}InteractorInterface> interactor;
 

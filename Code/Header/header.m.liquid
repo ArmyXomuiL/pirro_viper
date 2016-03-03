@@ -11,11 +11,9 @@
 #import "{{ prefix }}{{ module_info.name }}ViewController.h"
 #import "{{ prefix }}{{ module_info.name }}Interactor.h"
 #import "{{ prefix }}{{ module_info.name }}Presenter.h"
-#import "{{ prefix }}{{ module_info.name }}PresenterIO.h"
 
-@interface {{ prefix }}{{ module_info.name }}Header() <{{ prefix }}{{ module_info.name }}PresenterDelegate>
 
-@property (weak, nonatomic) id <{{ prefix }}{{ module_info.name }}Delegate> root;
+@interface {{ prefix }}{{ module_info.name }}Header()
 
 @property (strong, nonatomic) {{ prefix }}{{ module_info.name }}ViewController* controller;
 @property (strong, nonatomic) {{ prefix }}{{ module_info.name }}Interactor* interactor;
@@ -29,13 +27,12 @@
 - (id)initWithRoot:(id <{{ prefix }}{{ module_info.name }}Delegate>) root {
     self = [super init];
     if (self) {
-        self.root = root;
-        
-        self.controller = [{{ prefix }}{{ module_info.name }}ViewController new];
+        self.controller = [[UIStoryboard storyboardWithName:@"{{ prefix }}{{ module_info.name }}" bundle:nil] instantiateViewControllerWithIdentifier:@"{{ prefix }}{{ module_info.name }}ViewController"];
         self.presenter = [{{ prefix }}{{ module_info.name }}Presenter new];
         self.interactor = [{{ prefix }}{{ module_info.name }}Interactor new];
-        
-        self.presenter.head = self;
+
+        self.presenter.root = root;
+
         self.presenter.controller = self.controller;
         self.presenter.interactor = self.interactor;
         
@@ -47,8 +44,12 @@
 
 #pragma mark - {{ prefix }}{{ module_info.name }}Interface
 
-- (void)showInViewController:(UIViewController*) viewController {
+//- (void)showInViewController:(UIViewController*)viewController {
+//
+//}
 
-}
+//- (void)pushInNavigationController:(UINavigationController*)navigationController {
+//    [navigationController pushViewController:self.controller animated:YES];
+//}
 
 @end
