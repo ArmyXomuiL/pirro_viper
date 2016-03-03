@@ -2,7 +2,7 @@
 name: "pirro_viper"
 summary: "VIPER module template. Used in Pirro team"
 author: "ArmyXomuiL"
-version: "1.1.0"
+version: "1.2.0"
 license: "Pirro team"
 
 # The declarations for code files
